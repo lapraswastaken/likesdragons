@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Our Own Little Corner</title>
+<style>
+
+@media screen and (prefers-reduced-motion: reduce) {
+    * {
+        /* Very short durations means JavaScript that relies on events still
+         * works */
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+    }
+}
+
+* {
+    box-sizing: inherit;
+}
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+.box {
+    min-height: 100%;
+    display: grid;
+}
+@media screen and (width >= 480) {
+    .box {
+        grid-template-columns: 1fr, 3fr;
+    }
+}
+
+.header {
+    background-color: green;
+    color: whitesmoke;
+    text-align: center;
+    font-size: 1vh;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+<div class="header">
+    <h1 id="likesdragons-header">Likes Dragons</h1>
+</div>
+<div class="links">
+    <h2>Links</h2>
+    <table>
+        <tr>
+            <th scope="row">FA</th>
+        </tr>
+        <tr>
+            <th scope="row">Bsky</th>
+        </tr>
+        <tr>
+            <th scope="row">Discord</th>
+        </tr>
+        <tr>
+            <th scope="row">Telegram</th>
+        </tr>
+    </table>
+</div>
+<div class="welcome">
+    <h3>Welcome to Our Own Little Corner of Existence!</h3>
+    <p>
+        This site will serve as a little hub for my links.
+    </p>
+</div>
+</div>
+
+<script>
+/** 
+ * @param {string[]} a
+ * @returns
+ */
+let choose_r = (a) => {return a[Math.floor(Math.random()*a.length)]}
+let dragon_likers = [
+    "Dureu",
+    "Qir",
+    "Okko",
+    "Jurel",
+    "Abby",
+]
+document.getElementById("likesdragons-header")
+    .innerHTML = `${choose_r(dragon_likers)} Likes Dragons`
+</script>
+
+</body>
+</html>
