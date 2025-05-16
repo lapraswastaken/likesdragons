@@ -39,6 +39,22 @@ html {
     text-align: center;
     font-size: 1vh;
 }
+.links h2 {
+    align-items: center;
+}
+.links table tr:hover {
+    background: lightblue;
+    cursor: hand;
+}
+.links table {
+    background: lightgreen;
+    overflow: hidden;
+}
+.links table tr td a {
+    display: block;
+    border: 1px solid black;
+    padding: 16px;
+}
 </style>
 
 </head>
@@ -54,6 +70,7 @@ html {
     <table>
         <tr>
             <th scope="row">FA</th>
+            <td><a href=https://www.furaffinity.net/user/squishenthusiastdureu>squish_enthusiast_dureu</a></td>
         </tr>
         <tr>
             <th scope="row">Bsky</th>
@@ -86,6 +103,7 @@ let dragon_likers = [
     "Okko",
     "Jurel",
     "Abby",
+    "Melori",
 ]
 document.getElementById("likesdragons-header")
     .innerHTML = `${choose_r(dragon_likers)} Likes Dragons`
